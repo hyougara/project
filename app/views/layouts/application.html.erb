@@ -10,6 +10,26 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="contaier">
+      <div class="header">
+        <div class="header-logo">
+        <h1>Monologue</h1>
+        </div>
+        <div class="header-list">
+            <ul>
+                <li><a href ="/home">home</a></li>
+                <li><a href ="/about">monologueとは</a></li>
+                <li><a href ="#">新規登録</a></li>
+                <li><a href ="#">ログイン</a></li>
+            </ul>
+        </div>
+      </div>
+      <div class="flash">
+        <% if flash[:notice] %>
+        <%= flash[:notice] %>
+        <% end %>
+      </div>
+      <%= yield %>
+    </div>
   </body>
 </html>
